@@ -1,0 +1,182 @@
+:root {
+    --moderate-violet : hsl(263, 55%, 52%);
+    --vd-grayish-blue : hsl(217, 19%, 35%);
+    --vd-blackish-blue : hsl(219, 29%, 14%);
+    --white : hsl(0, 0%, 100%);
+    --light-gray : hsl(0, 0%, 81%);
+    --light-grayish-blue : hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    height: 100vh;
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+section {
+    width: 61.25rem;
+    height: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin : 2rem;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-profile-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-img {
+    width: 2rem;
+    border: solid 3px var(--moderate-violet);
+    border-radius: 100%;
+}
+
+.profile-name, .profile-status, .long-review {
+    font-size: 0.813rem;
+}
+
+.profile-status {
+    color: var(--light-grayish-blue);
+    font-size: 0.7rem;
+}
+
+.long-review {
+    color: hsla(0, 0%, 81%, 0.7);
+}
+
+.short-review {
+font-size: 1rem;
+z-index: 1;
+}
+
+.card-1 {
+    grid-column: 1 / span 2;
+    background-color: var(--moderate-violet);
+    position: relative;
+}
+
+.card-1 .short-review, .profile1 .profile-name, .card-2 .short-review, .card-4 .short-review{
+    color: var(--white);
+}
+
+.bg-quotation {
+    width: 7rem;
+    position: absolute;
+    top: 0%;
+    left: auto;
+    right: 15%;
+    bottom: auto;
+    z-index: 0;
+}
+
+.card-2 {
+    background-color: var(--vd-grayish-blue);
+}
+
+.card-3 {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: white;
+}
+
+.card-4 {
+    grid-column: 2 / span 2;
+    grid-row : 2;
+    background-color: var(--vd-blackish-blue);
+}
+
+.card-5 {
+    grid-column: 4;
+    grid-row : 1 / span 2;
+    background-color: white;
+}
+
+.card-blue .profile-name {
+    color: white;
+}
+
+.card-white .short-review {
+    color: var(--vd-grayish-blue);
+}
+
+.card-white .long-review, .card1 .long-review {
+    color: hsla(217, 30%, 14%, 0.7);
+}
+
+.card-w .profile-name {
+    color: var(--vd-grayish-blue);
+}
+
+.card-w .profile-status {
+    color: hsla(217, 30%, 14%, 0.5);
+}
+
+
+
+@media screen and (max-width : 375px) {
+    body {
+        height: auto;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .bg-quotation {
+        right: 10%;
+        width: 5rem;
+    }
+
+    .card {
+        grid-column: 1;
+    }
+    
+    .card-1 {
+        grid-row: 1 ;
+    }
+
+    .card-2 {
+        grid-row: 2;
+    }
+
+    .card-3 {
+        grid-row: 3;
+    }
+
+    .card-4 {
+        grid-row: 4;
+    }
+
+    .card-5 {
+        grid-row: 5;
+    }
+}
+
+@media screen and (max-width : 940px) {
+    body {
+        height: auto;
+    }
+}
